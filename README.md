@@ -45,7 +45,7 @@ Start the Admin app
  npm start
 Goto
 
- http://localhost:5000/adminPanel
+ http://localhost:5000
 cd to client directory
   npm i
   npm install
