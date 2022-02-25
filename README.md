@@ -19,10 +19,12 @@ Oracle Installation Guideline for Windows 10
 After completing the installation, you will need to setup the database schema. You can create your own schema and provide the credentials into the serverInformation.js file located in the /server directory.
 
 Run the snippets below in SQL Plus while being connected as sysdba.
+Set Up Database:
+Create User/Database
+Log in to SQL Plus with sysdba
 
-  CREATE USER c##brightmate_library IDENTIFIED BY root;
-  GRANT CREATE SESSION TO c##BADHON;
-  GRANT ALL PRIVILEGES TO c##BADHON;
+create user c##BADHON identified by password;
+grant dba to c##BADHON;
 Sign into your schema by providing these credentials:
 
   connect c##BADHON;
@@ -40,7 +42,7 @@ Install all the dependencies from package.json
 cd to server directory
   npm i
   npm install
-Start the Admin app
+Start the node app
 
  npm start
 Goto
